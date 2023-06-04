@@ -61,56 +61,49 @@ public class Main {
     public static void task4() {
         System.out.println("Задача 4");
 
-        double dep = 0;
+        double deposit = 15000;
         int month = 0;
-        int addToDep = 15000;
         double percent = .07;
         int moneyGoal = 12_000_000;
 
         do {
-            dep = dep + dep * percent;
-            dep = dep + addToDep;
+            deposit = deposit + deposit * percent;
             month++;
-            System.out.println("за " + month + " месяц накоплено " + dep);
-        } while (dep < moneyGoal);
-
+            System.out.println("за " + month + " месяц накоплено " + deposit);
+        } while (deposit < moneyGoal);
     }
 
     public static void task5() {
         System.out.println("Задача 5");
 
-        double dep = 0;
+        double deposit = 15000;
         int month = 0;
-        int addToDep = 15000;
         double percent = .07;
         int moneyGoal = 12_000_000;
 
         do {
-            dep = dep + dep * percent;
-            dep = dep + addToDep;
+            deposit = deposit + deposit * percent;
             month++;
             if (month % 6 == 0) {
-                System.out.println("за " + month + " месяц накоплено " + dep);
+                System.out.println("за " + month + " месяц накоплено " + deposit);
             }
-        } while (dep < moneyGoal);
+        } while (deposit < moneyGoal);
     }
 
     public static void task6() {
         System.out.println("Задача 6");
 
-        double dep = 0;
+        double deposit = 15000;
         int month = 0;
-        int addToDep = 15000;
         double percent = .07;
         int timeGoal = 9 * 12;
 
 
         do {
-            dep = dep + dep * percent;
-            dep = dep + addToDep;
+            deposit = deposit + deposit * percent;
             month++;
             if (month % 6 == 0) {
-                System.out.println("за " + month + " месяц накоплено " + dep);
+                System.out.println("за " + month + " месяц накоплено " + deposit);
             }
         } while (month <= timeGoal);
     }
