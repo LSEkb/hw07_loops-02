@@ -19,7 +19,7 @@ public class Main {
         int moneyGoal = 2_459_000;
 
         while (deposit < moneyGoal) {
-            deposit = deposit + monthlyPayment;
+            deposit += monthlyPayment;
             month = month + 1;
             System.out.println("Месяц " + month + ", сумма накоплений " + deposit + " рублей");
         }
@@ -60,52 +60,55 @@ public class Main {
 
     public static void task4() {
         System.out.println("Задача 4");
+        // переписано с циклом while
 
         double deposit = 15000;
         int month = 0;
         double percent = .07;
         int moneyGoal = 12_000_000;
 
-        do {
-            deposit = deposit + deposit * percent;
+        while (deposit < moneyGoal) {
+            deposit += deposit * percent;
             month++;
             System.out.println("за " + month + " месяц накоплено " + deposit);
-        } while (deposit < moneyGoal);
+        }
     }
 
     public static void task5() {
         System.out.println("Задача 5");
+        // переписано с циклом for
+        // не уверена, насколько корректно оставлять накопления в нулевой месяц, в 6й задаче нулевой месяц убран, здесь с ним
 
         double deposit = 15000;
         int month = 0;
         double percent = .07;
         int moneyGoal = 12_000_000;
 
-        do {
-            deposit = deposit + deposit * percent;
-            month++;
+        for (; deposit < moneyGoal; deposit += deposit * percent) {
             if (month % 6 == 0) {
                 System.out.println("за " + month + " месяц накоплено " + deposit);
             }
-        } while (deposit < moneyGoal);
+            month++;
+        }
     }
 
     public static void task6() {
         System.out.println("Задача 6");
+        // переписано c циклом for
 
         double deposit = 15000;
         int month = 0;
         double percent = .07;
         int timeGoal = 9 * 12;
 
-
-        do {
-            deposit = deposit + deposit * percent;
-            month++;
-            if (month % 6 == 0) {
+        for (; month <= timeGoal; month++) {
+            if (month!=0 && month % 6 == 0) {
                 System.out.println("за " + month + " месяц накоплено " + deposit);
             }
-        } while (month <= timeGoal);
+            deposit += deposit * percent;
+        }
+
+
     }
 
     public static void task7() {
