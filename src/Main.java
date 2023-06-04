@@ -60,21 +60,84 @@ public class Main {
 
     public static void task4() {
         System.out.println("Задача 4");
+
+        double dep = 0;
+        int month = 0;
+        int addToDep = 15000;
+        double percent = .07;
+        int moneyGoal = 12_000_000;
+
+        do {
+            dep = dep + dep * percent;
+            dep = dep + addToDep;
+            month++;
+            System.out.println("за " + month + " месяц накоплено " + dep);
+        } while (dep < moneyGoal);
+
     }
 
     public static void task5() {
         System.out.println("Задача 5");
+
+        double dep = 0;
+        int month = 0;
+        int addToDep = 15000;
+        double percent = .07;
+        int moneyGoal = 12_000_000;
+
+        do {
+            dep = dep + dep * percent;
+            dep = dep + addToDep;
+            month++;
+            if (month % 6 == 0) {
+                System.out.println("за " + month + " месяц накоплено " + dep);
+            }
+        } while (dep < moneyGoal);
     }
 
     public static void task6() {
         System.out.println("Задача 6");
+
+        double dep = 0;
+        int month = 0;
+        int addToDep = 15000;
+        double percent = .07;
+        int timeGoal = 9 * 12;
+
+
+        do {
+            dep = dep + dep * percent;
+            dep = dep + addToDep;
+            month++;
+            if (month % 6 == 0) {
+                System.out.println("за " + month + " месяц накоплено " + dep);
+            }
+        } while (month <= timeGoal);
     }
 
     public static void task7() {
         System.out.println("Задача 7");
+
+        int firstFriday = 6;
+        int dayInMonth = 31;
+
+        for (int day = firstFriday; day <= dayInMonth; day += 7) {
+            System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
+        }
     }
 
     public static void task8() {
         System.out.println("Задача 8");
+
+        int period = 79;
+        int currentYear = 2023;
+        int lowerBoundYears = currentYear - 200;
+        int upperBoundYears = currentYear + 100;
+
+        for (int year = 0; year <= upperBoundYears; year += period) {
+            if (year > lowerBoundYears) {
+                System.out.println(year);
+            }
+        }
     }
 }
